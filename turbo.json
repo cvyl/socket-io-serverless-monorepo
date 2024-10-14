@@ -4,15 +4,24 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*"],
-      "outputs": [".next/**", "!.next/cache/**"]
-    },
-    "lint": {
-      "dependsOn": ["^lint"]
+      "outputs": ["dist/**"]
     },
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "db:gen": {
+      "cache": false
+    },
+    "db:migrate": {
+      "cache": false
+    },
+    "cf:deploy": {
+      "cache": false,
+      "dependsOn": ["^cf:deploy"]
+    },
+    "check": {
+      "dependsOn": ["^check"]
     }
   }
 }

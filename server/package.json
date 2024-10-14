@@ -1,0 +1,37 @@
+{
+  "name": "@jokester/sio-serverless-demo-server",
+  "private": true,
+  "version": "0.0.1",
+  "description": "a simple socket.io server",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "dev:cf": "DEBUG=limb:*,-socket.io:* wrangler dev",
+    "build:cf": "DEBUG=limb:*,-socket.io:* wrangler deploy --dry-run --outdir ./build",
+    "dev:node": "DEBUG=limb:*,-socket.io:* tsx watch src/node/main.ts",
+    "cf:deploy": "wrangler deploy",
+    "fix": "gts fix"
+  },
+  "author": "Wang Guan <momocraft@gmail.com>",
+  "license": "BSD",
+  "dependencies": {
+    "@jokester/ts-commonutil": "^0.6.0",
+    "debug": "^4.3.7",
+    "engine.io": "^6.6.2",
+    "hono": "^4.6.3",
+    "socket.io-serverless": "0.1.0-beta2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241004.0",
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/debug": "^4.1.12",
+    "@types/node": "^20.16.10",
+    "@types/ws": "^8.5.12",
+    "base64id": "^2.0.0",
+    "socket.io": "^4.8.0",
+    "tsx": "*",
+    "typescript": "*",
+    "wrangler": "^3.80"
+  }
+}
