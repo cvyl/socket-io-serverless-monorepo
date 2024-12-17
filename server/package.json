@@ -19,7 +19,7 @@
     "@jokester/ts-commonutil": "^0.6.0",
     "debug": "^4.3.7",
     "engine.io": "^6.6.2",
-    "hono": "^4.6.3",
+    "hono": "^4.6.5",
     "socket.io-serverless": "0.1.0-beta2"
   },
   "devDependencies": {
